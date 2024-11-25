@@ -225,3 +225,9 @@ h2{
 input::placeholder, textarea::placeholder {
     opacity: 0.4!important; /* Ensures the color is fully opaque */
 }
+
+@media (min-width: 992px) {
+    .position-lg-static{
+        position: static!important;
+    }
+}

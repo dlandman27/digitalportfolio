@@ -18,6 +18,12 @@ const routes = {
         nav_element: "#about",
         description: "This is the home page",
     },
+    "/resume": {
+        template: "/templates/resume.html",
+        title: "Resume",
+        nav_element: "#resume",
+        description: "This is the resume page",
+    },
     "/contact": {
         template: "/templates/contact.html",
         title: "Contact Us",

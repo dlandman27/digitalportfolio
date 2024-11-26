@@ -41,13 +41,24 @@ const route = (event) => {
 };
 
 const locationHandler = async () => {
-    const location = window.location.pathname; // get the url path
+    let location = window.location.hash.replace('#', ''); // get the hash path
+    console.log('location', location);
 
     // if the path length is 0, set it to primary page route
     if (location.length == 0) {
         location = "/";
     }
+    console.log('location', location);
     const route = routes[location] || routes["404"];
+    
+    // Highlight the active nav item based on the current route
+    if(location !== '/'){
+        $('.nav-item').removeClass('active'); // Remove active class from all nav items
+        $(`.nav-item a[href="/#${location}"]`).parent().addClass('active'); // Add active class to the parent of the matching nav-link
+    } else {
+        $(`.nav-item a[href="/"]`).parent().addClass('active');
+    }
+
     // get the html from the template
     try {
         const html = await fetch(route.template).then((response) => {
@@ -69,7 +80,6 @@ const locationHandler = async () => {
 $(document).ready(() => {
     // add an event listener to the window that watches for url changes
     window.onpopstate = locationHandler;
-    // call the urlLocationHandler function to handle the initial url
     window.route = route;
     locationHandler();
 });

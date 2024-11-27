@@ -73,7 +73,17 @@ const locationHandler = async () => {
         document.title = route.title;
     } catch (error) {
         console.error('Error fetching the template:', error);
-        document.getElementById("content").innerHTML = "<h1>Error loading content</h1>";
+        document.getElementById("content").innerHTML = `
+        <div class="portfolio-container">
+            <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                <div class="spin d-flex justify-content-center align-items-center mb-3">
+                    <i class="icon ion-md-square-outline text-primary" style="font-size: 64px;"></i>
+                </div>
+                <h1>Coming Soon</h1>
+                <p class="text-center">This page is under construction. Please check back soon.</p>
+            </div>
+        </div>
+        `;
     }
 };
 

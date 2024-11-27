@@ -60,6 +60,10 @@ p{
     box-shadow: 0 4px 8px 0 rgba(154, 168, 188, 0.4);
 }
 
+.custom-navbar{
+    box-shadow: 0 4px 8px 0 rgba(154, 168, 188, 0.4);
+}
+
 hr.header-underline{
     width: 20%;
     height: 4px;

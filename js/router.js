@@ -14,19 +14,19 @@ const routes = {
     },
     "/": {
         template: "/templates/about.html",
-        title: "Home",
+        title: "Dylan Landman | About",
         nav_element: "#about",
         description: "This is the home page",
     },
     "/resume": {
         template: "/templates/resume.html",
-        title: "Resume",
+        title: "Dylan Landman | Resume",
         nav_element: "#resume",
         description: "This is the resume page",
     },
     "/contact": {
         template: "/templates/contact.html",
-        title: "Contact Us",
+        title: "Dylan Landman | Contact",
         nav_element: "#contact",
         description: "This is the contact page",
     },

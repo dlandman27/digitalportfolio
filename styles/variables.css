@@ -257,6 +257,10 @@ input::placeholder, textarea::placeholder {
     .position-lg-static{
         position: static!important;
     }
+
+    .position-lg-sticky{
+        position: sticky!important;
+    }
 }
 
 .w-fit-content{

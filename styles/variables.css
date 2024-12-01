@@ -286,7 +286,7 @@ input::placeholder, textarea::placeholder {
 
 .portfolio-logo-image{
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1/1;
     max-width: 124px;
     object-fit: contain;
 }
@@ -312,5 +312,14 @@ input::placeholder, textarea::placeholder {
 .animate__animated{
     animation-duration: 0.5s!important;
     transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1)!important;
+}
+
+.custom-checkbox{
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+
+.custom-checkbox .form-check-input{
+    margin-top: 0.25rem;
 }
 

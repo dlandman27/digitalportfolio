@@ -40,7 +40,7 @@ const routes = {
 
 const route = (event) => {
     event = event || window.event; // get window.event if event argument not provided
-    event.preventDefault();
+    // event.preventDefault();
     // window.history.pushState(state, unused, target link);
     window.history.pushState({}, "", event.target.href);
     locationHandler();

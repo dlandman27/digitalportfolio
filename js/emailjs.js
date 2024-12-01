@@ -5,20 +5,28 @@
 })();
 
 document.addEventListener('click', function(event) {
-    if (event.target.matches('#contact-form')) {
-        // Attach the submit event listener when the form is clicked
-        event.target.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
 
-            // Send form data via EmailJS
-            emailjs.sendForm('service_20241129', 'template_20241129', this)
-                .then(function(response) {
-                    alert('Message sent successfully!');
-                    console.log('SUCCESS!', response.status, response.text);
-                }, function(error) {
-                    alert('Failed to send the message. Please try again later.');
-                    console.error('FAILED...', error);
-                });
-        }, { once: true }); // Use { once: true } to ensure the listener is added only once
+    const SERVICE_ID = 'service_ohht1si';
+    const TEMPLATE_ID = 'template_0oh4zgm';
+
+    if (event.target.id === 'contact-form-button') {  
+        event.preventDefault();
+        
+        $('#contact-form-button').html('<i class="ion ion-md-square mr-1 spin"></i> Sending...');
+        $('#contact-form-button').prop('disabled', true);
+
+        emailjs.send(SERVICE_ID, TEMPLATE_ID,{
+            to_name: "Dylan",
+            from_name: document.getElementById('name').value + ' @ ' + document.getElementById('email').value,
+            message: document.getElementById('message').value,
+        }).then(function(response) {
+            alert('Message sent successfully!');
+            window.location.reload();
+        }, function(error) {
+            alert('Failed to send the message. Please try again later.');
+            $('#contact-form-button').html('Send me a message');
+            $('#contact-form-button').prop('disabled', false);
+            console.error('FAILED...', error);
+        });
     }
 });

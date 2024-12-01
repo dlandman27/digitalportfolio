@@ -43,16 +43,16 @@
   Lightbox.defaults = {
     albumLabel: 'Image %1 of %2',
     alwaysShowNavOnTouchDevices: false,
-    fadeDuration: 600,
+    fadeDuration: 400, // Increased for smoother transition
     fitImagesInViewport: true,
-    imageFadeDuration: 600,
+    imageFadeDuration: 400, // Increased for smoother transition
     // maxWidth: 800,
     // maxHeight: 600,
     positionFromTop: 50,
-    resizeDuration: 700,
+    resizeDuration: 0, // Increased for smoother transition
     showImageNumberLabel: true,
     wrapAround: false,
-    disableScrolling: false,
+    disableScrolling: true,
     /*
     Sanitize Title
     If the caption data is trusted, for example you are hardcoding it in, then leave this to false.
@@ -140,6 +140,10 @@
     this.$overlay.hide().on('click', function() {
       self.end();
       return false;
+    });
+
+    $(window).resize(function() {
+      self.end();
     });
 
     this.$lightbox.hide().on('click', function(event) {

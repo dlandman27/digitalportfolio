@@ -101,6 +101,14 @@ hr.header-underline{
     gap: 2rem;
 }
 
+.gap-y-2{
+    gap: 1rem;
+}
+
+.gap-y-3{
+    gap: 2rem;
+}
+
 .nav-item{
     transition: all 0.3s ease;
     height: fit-content!important;

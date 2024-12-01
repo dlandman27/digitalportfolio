@@ -1,0 +1,52 @@
+input.customCheckbox[type="checkbox"] {
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 32px;
+    height: 20px; /* Adjust the height if necessary */
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    outline: none;
+    transition: 0.2s;
+    cursor: pointer;
+    position: relative;
+}
+
+input.customCheckbox[type="checkbox"]:checked {
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+input.customCheckbox[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ccc;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    top: 50%;
+    left: 2px; /* Adjust the horizontal position if necessary */
+    transform: translateY(-50%);
+    transition: 100ms ease-in-out;
+}
+
+input.customCheckbox[type="checkbox"]:checked::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(154, 168, 188, 0.4);
+    top: 50%;
+    left: calc(100% - 16px); /* Adjust for the size of the circle */
+    transform: translateY(-50%);
+    transition: 100ms ease-in-out;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}

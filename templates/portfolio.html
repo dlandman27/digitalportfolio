@@ -1,4 +1,5 @@
 <div class="d-flex flex-column flex-lg-row gap-x-3">
+    
     <div class="d-none d-lg-flex portfolio-container h-100 flex-column align-items-center position-lg-sticky top-16">
         <div class="portfolio-filter" style="min-width: 18rem;">
             <h4>Explore My Portfolio</h4>
@@ -6,26 +7,53 @@
             <div class="divider"></div>
             <div class="d-flex flex-column gap-y-2">
                 <div class="form-check checkbox-container">
-                    <input class="form-check-input customCheckbox" type="checkbox" id="software-projects" value="Software Projects" checked>
-                    <label class="form-check-label" for="software-projects">Software Projects</label>
-                </div>
-                <div class="form-check checkbox-container">
-                    <input class="form-check-input customCheckbox" type="checkbox" id="logos" value="Logos" checked>
+                    <input class="form-check-input customCheckbox" onclick="handleCheckboxClick('Logos')" type="checkbox" id="logos" value="Logos" checked>
                     <label class="form-check-label" for="logos">Logos</label>
                 </div>
                 <div class="form-check checkbox-container">
-                    <input class="form-check-input customCheckbox" type="checkbox" id="web-development" value="Web Development" checked>
+                    <input class="form-check-input customCheckbox" onclick="handleCheckboxClick('Websites')" type="checkbox" id="web-development" value="Web Development" checked>
                     <label class="form-check-label" for="web-development">Web Development</label>
                 </div>
                 <div class="form-check checkbox-container">
-                    <input class="form-check-input customCheckbox" type="checkbox" id="ux-design" value="UX Design" checked>
+                    <input class="form-check-input customCheckbox" onclick="handleCheckboxClick('Software Projects')" type="checkbox" id="software-projects" value="Software Projects" checked>
+                    <label class="form-check-label" for="software-projects">Software Projects</label>
+                </div>
+                <div class="form-check checkbox-container">
+                    <input class="form-check-input customCheckbox" onclick="handleCheckboxClick('UX Design')" type="checkbox" id="ux-design" value="UX Design" checked>
                     <label class="form-check-label" for="ux-design">UX Design</label>
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="d-flex d-md-none position-fixed bottom-0 w-100" style="z-index: 1000;">
+        <div class="portfolio-filter" style="min-width: 18rem;">
+            <h4>Explore My Portfolio</h4>
+            <p style="max-width: 20rem;" class="mb-4">Discover my diverse range of projects, showcasing my skills in <span class="text-primary">software development</span>, <span class="text-primary">logo design</span>, <span class="text-primary">web development</span>, and <span class="text-primary">user experience design</span>.</p>
+            <div class="divider"></div>
+            <div class="d-flex flex-column gap-y-2">
+                <div class="form-check checkbox-container">
+                    <input class="form-check-input customCheckbox" onclick="handleCheckboxClick('Logos')" type="checkbox" id="logos" value="Logos" checked>
+                    <label class="form-check-label" for="logos">Logos</label>
+                </div>
+                <div class="form-check checkbox-container">
+                    <input class="form-check-input customCheckbox" onclick="handleCheckboxClick('Websites')" type="checkbox" id="web-development" value="Web Development" checked>
+                    <label class="form-check-label" for="web-development">Web Development</label>
+                </div>
+                <div class="form-check checkbox-container">
+                    <input class="form-check-input customCheckbox" onclick="handleCheckboxClick('Software Projects')" type="checkbox" id="software-projects" value="Software Projects" checked>
+                    <label class="form-check-label" for="software-projects">Software Projects</label>
+                </div>
+                <div class="form-check checkbox-container">
+                    <input class="form-check-input customCheckbox" onclick="handleCheckboxClick('UX Design')" type="checkbox" id="ux-design" value="UX Design" checked>
+                    <label class="form-check-label" for="ux-design">UX Design</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="w-100">
-        <div class="portfolio-container mb-4 animate__animated animate__backInUp">
+        <div class="portfolio-container mb-4 animate__animated animate__backInUp" data-filter="Logos">
             <!-- Logos -->
             <h1>Logos</h1>
             <hr class="header-underline mb-4">
@@ -45,23 +73,108 @@
             </div>
         </div>
 
-        <div class="portfolio-container animate__animated animate__backInUp">
-            <!-- Projects -->
-            <h1>Software Projects</h1>
+        <div class="portfolio-container mb-4 animate__animated animate__backInUp" data-filter="Websites">
+            <!-- Websites -->
+            <h1>Websites</h1>
             <hr class="header-underline mb-4">
+            <div id="websites-container" class="d-flex flex-row flex-wrap gap-x-3 mb-3">
+                <div class="portfolio-container col-12 col-md-5 p-0">
+                    <img src="images/websites/takeoff.png" class="br-1 portfolio-image" alt="Takeoff Esports">
+                    <div class="p-4">
+                        <h2>Takeoff Esports</h2>
+                        <hr class="header-underline mb-3">
+                        <p>Takeoff Esports is a <span class="text-primary">professional esports organization</span> and <span class="text-primary">clothing company</span> that aims to bring competitive gaming to the next level. Their mission is to foster a <span class="text-primary">community</span> of <span class="text-primary">gamers</span>, <span class="text-primary">content creators</span>, and <span class="text-primary">fans</span> who share a passion for esports and gaming culture.</p>
+                        <a href="https://takeoffgg.com" target="_blank" class="btn btn-primary mb-2"><i class="icon ion-md-arrow-round-forward"></i> View Project</a>
+                    </div>
+                </div>
 
-            <div class="portfolio-container col-12 col-md-6 col-lg-4 p-0">
-                <img src="images/background-1.jpg" class="br-1 portfolio-image" alt="Background">
-                <div class="p-4">
-                    <h2>Project Title</h2>
-                    <a href="/#/" class="text-primary mb-2"><i class="icon ion-md-arrow-round-forward"></i> View Project</a>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="portfolio-container col-12 col-md-5 p-0">
+                    <img src="images/websites/playbookraise.png" class="br-1 portfolio-image" alt="Playbook Raise">
+                    <div class="p-4">
+                        <h2>Playbook Raise</h2>
+                        <hr class="header-underline mb-3">
+                        <p>Playbook Raise is a <span class="text-primary">fundraising platform</span> that I worked on, designed to help kids raise money for their teams and win prizes. This platform has been incredibly successful, generating over <span class="text-primary">$2 million</span> in funds.</p>
+                        <a href="https://playbookraise.com" target="_blank" class="btn btn-primary mb-2"><i class="icon ion-md-arrow-round-forward"></i> View Project</a>
+                        <a href="https://sushtest.playbookraise.com" target="_blank" class="btn btn-primary mb-2"><i class="icon ion-md-arrow-round-forward"></i> View Test Site</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-container col-12 col-md-5 p-0">
+                    <img src="images/websites/balls.jpg" class="br-1 portfolio-image" alt="Playbook Sports">
+                    <div class="p-4">
+                        <h2>Playbook Sports</h2>
+                        <hr class="header-underline mb-3">
+                        <p>Playbook Sports is a sports SAAS that I work at that helps teams and organizations manage their sports programs.</p>
+                        <a href="https://callplaybook.com" target="_blank" class="btn btn-primary mb-2"><i class="icon ion-md-arrow-round-forward"></i> View Project</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-container col-12 col-md-5 p-0">
+                    <img src="images/websites/locks.jpg" class="br-1 portfolio-image" alt="Squatter Watch">
+                    <div class="p-4">
+                        <h2>Squatter Watch</h2>
+                        <hr class="header-underline mb-3">
+                        <p>Squatter Watch is a site that helps teach people about squatting and how to avoid it.</p>
+                        <a href="https://squatterwatch.com" target="_blank" class="btn btn-primary mb-2"><i class="icon ion-md-arrow-round-forward"></i> View Project</a>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div id="content-container" class="d-flex flex-row flex-nowrap gap-3">
+        <div class="portfolio-container animate__animated animate__backInUp mb-4" data-filter="Software Projects">
+            <!-- Projects -->
+            <h1>Software Projects</h1>
+            <hr class="header-underline mb-4">
 
+            <div id="websites-container" class="d-flex flex-row flex-wrap gap-x-3 mb-3">
+                <div class="portfolio-container col-12 col-md-5 p-0">
+                    <img src="images/software/portfolio.jpg" class="br-1 portfolio-image" alt="Digital Portfolio">
+                    <div class="p-4">
+                        <h2>Digital Portfolio</h2>
+                        <hr class="header-underline mb-3">
+                        <div class="d-flex flex-wrap align-items-center gap-x-1">
+                            <a class="d-block text-primary mb-2 pill-container mb-2" href="https://www.awwwards.com/sites/dylan-landman"><i class="icon ion-md-star pill"></i> Awwwards Honorable Mention</a>
+                            <small class="d-block text-primary mb-2 pill-container mb-2" ><i class="icon ion-md-heart pill"></i> Shoutout</small>
+                            <small class="d-block pill-container mb-2" ><i class="icon ion-md-globe pill"></i> Website</small>
+                        </div>
+                        <p class="mt-4">This is a digital portfolio that I made to showcase my work and skills. It styles a pokemon style pixel theme where you can travel around a map and explore my skills and work.</p>
+                        <a href="https://dlandman27.github.io/pixel-portfolio" target="_blank" class="btn btn-primary mb-2"><i class="icon ion-md-arrow-round-forward"></i> View Project</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-container col-12 col-md-5 p-0">
+                    <img src="images/software/geometry.png" class="br-1 portfolio-image" alt="Wiigit">
+                    <div class="p-4">
+                        <h2>Wiigit</h2>
+                        <hr class="header-underline mb-3">
+                        <small class="pill-container mb-2" ><i class="icon ion-md-phone-portrait pill"></i> Mobile App</small>
+                        <p class="mt-4">Wiigit is a mobile productivity app to help people stay focused and see their progress over time, by showing insights on their habits and productivity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-container mb-4 animate__animated animate__backInUp" data-filter="UX Design">
+            <!-- UX Design -->
+            <h1>UX Design</h1>
+            <hr class="header-underline mb-4">
+            <div id="websites-container" class="d-flex flex-row flex-wrap gap-x-3 mb-3">
+                <div class="portfolio-container col-12 p-0">
+                    <img src="images/software/geometry.png" class="br-1 portfolio-image" alt="Takeoff Esports">
+                    <div class="p-4">
+                        <h2>Reimagining the Virtual Classroom: Enhancing Engagement and Student-Teacher Interaction in the Digital Age</h2>
+                        <hr class="header-underline mb-3">
+                        <p>Virtual classrooms have remained popular post-COVID-19 due to benefits like accessibility and safety. However, they face challenges such as limited student-teacher interaction, mismatched expectations, and difficulties in assessing student understanding. This work reviews current virtual classroom systems addressing these issues and proposes solutions inspired by the success of physical classrooms to enhance engagement and interactivity in online learning.</p>
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3591196.3596617" target="_blank" class="btn btn-primary mb-2"><i class="icon ion-md-arrow-round-forward"></i> View Research Paper</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<script>
+    function handleCheckboxClick() {
+        console.log(checkbox);
+    }
+</script>

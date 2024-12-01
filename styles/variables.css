@@ -197,6 +197,7 @@ h2{
     font-weight: 500;
     color: var(--primary-color);
     transition: all 0.3s ease;
+    width: fit-content; 
 }
 /* 
 .pill-container:hover{
@@ -331,3 +332,7 @@ input::placeholder, textarea::placeholder {
     margin-top: 0.25rem;
 }
 
+.portfolio-image{
+    object-fit: cover;
+    filter: brightness(0.5);
+}

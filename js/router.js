@@ -24,6 +24,12 @@ const routes = {
         nav_element: "#resume",
         description: "This is the resume page",
     },
+    "/portfolio": {
+        template: "/templates/portfolio.html",
+        title: "Dylan Landman | Portfolio",
+        nav_element: "#portfolio",
+        description: "This is the portfolio page",
+    },
     "/contact": {
         template: "/templates/contact.html",
         title: "Dylan Landman | Contact",

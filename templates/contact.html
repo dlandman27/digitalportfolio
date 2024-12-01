@@ -70,24 +70,24 @@
             <p class="mb-4">I’m always open to discussing exciting job opportunities, potential collaborations, or any creative projects you have in mind. Whether you’re looking for a skilled developer, a UX designer, or someone to bring your vision to life, feel free to reach out—I’d love to connect!</p>
 
             <div class="portfolio-container">
-                <form>
+                <form id="contact-form">
                     <div class="row">
                         <div class="col-12 col-lg-6">
                             <div class="form-group">
                                 <label for="name">Full Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                                <input type="text" class="form-control" id="name" name="user_name" placeholder="Enter your name" required>
                             </div>
                         </div>
                         <div class="col-12 col-lg-6">
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="email@gmail.com">
+                                <input type="email" class="form-control" id="email" name="user_email" placeholder="email@gmail.com" required>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea class="form-control" id="message" rows="3" placeholder="Write me a message..."></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="3" placeholder="Write me a message..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send me a message</button>
                 </form>

@@ -334,5 +334,4 @@ input::placeholder, textarea::placeholder {
 
 .portfolio-image{
     object-fit: cover;
-    filter: brightness(0.5);
 }

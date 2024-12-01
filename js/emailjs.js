@@ -15,6 +15,13 @@ document.addEventListener('click', function(event) {
         $('#contact-form-button').html('<i class="ion ion-md-square mr-1 spin"></i> Sending...');
         $('#contact-form-button').prop('disabled', true);
 
+        if (document.getElementById('name').value === '' || document.getElementById('email').value === '' || document.getElementById('message').value === '') {
+            alert('Please fill in all fields.');
+            $('#contact-form-button').html('Send me a message');
+            $('#contact-form-button').prop('disabled', false);
+            return;
+        }
+
         emailjs.send(SERVICE_ID, TEMPLATE_ID,{
             to_name: "Dylan",
             from_name: document.getElementById('name').value + ' @ ' + document.getElementById('email').value,

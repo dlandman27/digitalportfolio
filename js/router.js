@@ -8,30 +8,30 @@ $(document).on("click", ".nav-item", function(e) {
 
 const routes = {
     404: {
-        template: "/templates/404.html",
+        template: "templates/404.html",
         title: "404",
         description: "Page not found",
     },
     "/": {
-        template: "/templates/about.html",
+        template: "templates/about.html",
         title: "Dylan Landman | About",
         nav_element: "#about",
         description: "This is the home page",
     },
     "/resume": {
-        template: "/templates/resume.html",
+        template: "templates/resume.html",
         title: "Dylan Landman | Resume",
         nav_element: "#resume",
         description: "This is the resume page",
     },
     "/portfolio": {
-        template: "/templates/portfolio.html",
+        template: "templates/portfolio.html",
         title: "Dylan Landman | Portfolio",
         nav_element: "#portfolio",
         description: "This is the portfolio page",
     },
     "/contact": {
-        template: "/templates/contact.html",
+        template: "templates/contact.html",
         title: "Dylan Landman | Contact",
         nav_element: "#contact",
         description: "This is the contact page",

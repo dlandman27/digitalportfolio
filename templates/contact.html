@@ -1,58 +1,13 @@
-<div class="d-flex flex-column flex-lg-row gap-x-3">
-    <div class="d-none d-lg-flex portfolio-container h-100 flex-column align-items-center position-sticky top-16 animate__animated animate__fadeIn">
-        <div class="portfolio-container p-0 overflow-hidden mb-4">
-            <img src="../images/profile.jpg" class="br-1" alt="Profile Picture" style="width: 200px; height: 200px;">
-        </div>
-        <h3 class="text-center">Dylan&nbsp;Landman</h3>
-        <div class="d-flex flex-row flex-nowrap gap-2 align-items-center justify-content-center">
-            <div class="pill-container">Software&nbsp;Developer</div>
-            <div class="pill-container">Web&nbsp;Developer</div>
-        </div>
-        <div class="divider"></div>
-
-        <div class="d-flex flex-column flex-nowrap gap-3 justify-content-start">
-            <div class="d-flex flex-row flex-nowrap align-items-center mb-3" style="width: 100%;">
-                <div class="portfolio-container p-3 mr-3 mr-2 d-flex align-items-center justify-content-center" style="width: 3.5rem;">
-                    <i class="icon ion-md-mail text-primary icon-md"></i>
-                </div>
-                <div>
-                    <p class="text-primary mb-0 small mb-2" >EMAIL</p>
-                    <a href="mailto:dylandman287@gmail.com" class="text-secondary mb-0 fs-14">dylandman287@gmail.com</a>
-                </div>
+<div class="py-7">
+    <div class="d-flex flex-column flex-lg-row justify-content-center gap-4">
+        <!-- Left/Top Section -->
+        <div class="px-4 animate__animated animate__fadeIn col-lg-5" style="background-image: url('/images/grainy-texture.png'); background-size: cover;">
+            <i class="fa-solid fa-inbox fa-4x text-primary mb-4"></i>
+            <h1 class="display-5 fw-bold mb-3">Get in Touch</h1>
+            <div class="mx-auto">
+                <p class="mb-4">I'm always open to discussing exciting job opportunities, potential collaborations, or any creative projects you have in mind. Whether you're looking for a skilled developer, a UX designer, or someone to bring your vision to life, feel free to reach out—I'd love to connect!</p>
             </div>
-
-            <div class="d-flex flex-row flex-nowrap align-items-center mb-3">
-                <div class="portfolio-container p-3 mr-3 mr-2 d-flex align-items-center justify-content-center" style="width: 3.5rem;">
-                    <i class="icon ion-md-call text-primary icon-md"></i>
-                </div>
-                <div>
-                    <p class="text-primary mb-0 small mb-2">PHONE #</p>
-                    <a href="tel:+15165142959" class="text-secondary mb-0 fs-14">+1 (516) 514-2959</a>
-                </div>
-            </div>
-
-            <div class="d-flex flex-row flex-nowrap align-items-center">
-                <div class="portfolio-container p-3 mr-3 mr-2 d-flex align-items-center justify-content-center" style="width: 3.5rem;">
-                    <i class="icon ion-md-pin text-primary icon-md"></i>
-                </div>
-                <div>
-                    <p class="text-primary mb-0 small mb-2">LOCATION</p>
-                    <p class="text-secondary mb-0 fs-14">Hoboken, NJ</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-container w-100 animate__animated animate__backInUp">
-        <div class="portfolio-container mb-4 p-0 br-1" style="overflow: hidden;">
-            <div class="portfolio-container p-0">
-                <img src="../images/hoboken.jpg" alt="Hoboken, NJ on Map" style="width: 100%; height: auto; max-height: 10rem; object-fit: cover;">
-            </div>
-        </div>
-        <div>
-            <h1>Contact Me</h1>
-            <hr class="header-underline my-2">
-
-            <div class="d-flex flex-row justify-content-start" style="gap: 1rem;">
+            <div class="d-flex flex-row" style="gap: 1rem;">
                 <a href="https://www.linkedin.com/in/dylanlandman/" target="_blank" rel="noopener noreferrer">
                     <i class="icon ion-logo-linkedin text-primary icon-md-lg"></i>
                 </a>
@@ -66,32 +21,31 @@
                     <i class="icon ion-logo-instagram text-primary icon-md-lg"></i>
                 </a>
             </div>
+        </div>
 
-            <p class="mb-4">I’m always open to discussing exciting job opportunities, potential collaborations, or any creative projects you have in mind. Whether you’re looking for a skilled developer, a UX designer, or someone to bring your vision to life, feel free to reach out—I’d love to connect!</p>
-
-            <div class="contact-form-container">
-                <form id="contact-form" onsubmit="(event) => sendEmail(event)">
-                    <div class="row">
-                        <div class="col-12 col-lg-6">
+        <!-- Right/Bottom Section -->
+        <div class="contact-form-container col-lg-5 px-4 py-5 my-lg-0 my-4 rounded" style="background-color: #F0EEE6;">
+            <form id="contact-form" onsubmit="(event) => sendEmail(event)">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" class="form-control" id="name" name="user_name" placeholder="Enter your name" required>
                         </div>
-                        </div>
-                        <div class="col-12 col-lg-6">
+                    </div>
+                    <div class="col-12 col-lg-6">
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" class="form-control" id="email" name="user_email" placeholder="email@gmail.com" required>
                         </div>
-                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea class="form-control" style="resize: none; height: 10rem;" id="message" name="message" rows="3" placeholder="Write me a message..." required></textarea>
-                    </div>
-                    <button type="submit" id="contact-form" class="btn btn-primary">Send me a message</button>
-                </form>
-            </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" style="resize: none; height: 10rem;" id="message" name="message" rows="3" placeholder="Write me a message..." required></textarea>
+                </div>
+                <button type="submit" id="contact-form" class="btn btn-primary">Send me a message</button>
+            </form>
         </div>
     </div>
 </div>

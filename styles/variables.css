@@ -17,6 +17,16 @@
     padding-bottom: 5rem!important;
 }
 
+@media (min-width: 768px) {
+    .py-md-7{
+        padding-top: 5rem!important;
+        padding-bottom: 5rem!important;
+    }
+}
+
+
+
+
 
 /* @media (prefers-color-scheme: dark) {
     :root {

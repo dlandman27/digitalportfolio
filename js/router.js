@@ -36,6 +36,12 @@ const routes = {
         nav_element: "#contact",
         description: "This is the contact page",
     },
+    "/newsletter": {
+        template: "templates/newsletter.html",
+        title: "Dylan Landman | Newsletter",
+        nav_element: "#newsletter",
+        description: "This is the newsletter page",
+    },
 };
 
 const route = (event) => {
